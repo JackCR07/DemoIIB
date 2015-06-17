@@ -1,0 +1,15 @@
+
+
+Importing file: C:\Users\jcervantes\Documents\GBM\Workspaces\Worklight\DemoMapa\IIB\CoordManage\CoordManage.wsdl
+
+Copying source WSDL CoordManage.wsdl to CoordManage.wsdl.
+The WSDL import will proceed with bindings CoordManageHttpBinding.
+Creating wsdl schema document for platform:/resource/CoordManage/CoordManage.wsdl.
+Parsing wsdl binding {http://CoordManage}CoordManageHttpBinding.
+Parsing wsdl binding input saveCoordenada.
+Parsing wsdl binding output saveCoordenada.
+Parsing wsdl binding input getCoordenada.
+Parsing wsdl binding output getCoordenada.
+Processing doc style for operation saveCoordenada.
+Processing doc style for operation getCoordenada.
+Populating WSDL schema platform:/resource/CoordManage/CoordManage.wsdl.

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions name="CoordManage" targetNamespace="http://CoordManage" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://CoordManage" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:documentation>
+    <wsdl:appinfo source="WMQI_APPINFO">
+      <MRWSDLAppInfo imported="true">
+        <generatedXSD location="CoordManage_InlineSchema1.xsd"/>
+        <binding hasEncoding="false" imported="true" name="CoordManageHttpBinding" originalBindingStyle="document"/>
+      </MRWSDLAppInfo>
+    </wsdl:appinfo>
+  </wsdl:documentation>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://CoordManage">
+            <xsd:include schemaLocation="CoordManage_InlineSchema1.xsd"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="saveCoordenadaRequestMsg">
+    <wsdl:part element="tns:saveCoordenada" name="saveCoordenadaParameters"/>
+  </wsdl:message>
+  <wsdl:message name="saveCoordenadaResponseMsg">
+    <wsdl:part element="tns:saveCoordenadaResponse" name="saveCoordenadaResult"/>
+  </wsdl:message>
+    <wsdl:message name="getCoordenadaRequestMsg">
+    <wsdl:part element="tns:getCoordenada" name="getCoordenadaParameters"/>
+  </wsdl:message>
+    <wsdl:message name="getCoordenadaResponseMsg">
+    <wsdl:part element="tns:getCoordenadaResponse" name="getCoordenadaResult"/>
+  </wsdl:message>
+    <wsdl:portType name="CoordManage">
+    <wsdl:operation name="saveCoordenada">
+      <wsdl:input message="tns:saveCoordenadaRequestMsg" name="saveCoordenadaRequest"/>
+      <wsdl:output message="tns:saveCoordenadaResponseMsg" name="saveCoordenadaResponse"/>
+    </wsdl:operation>
+        <wsdl:operation name="getCoordenada">
+      <wsdl:input message="tns:getCoordenadaRequestMsg" name="getCoordenadaRequest"/>
+      <wsdl:output message="tns:getCoordenadaResponseMsg" name="getCoordenadaResponse"/>
+    </wsdl:operation>
+    </wsdl:portType>
+  <wsdl:binding name="CoordManageHttpBinding" type="tns:CoordManage">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="saveCoordenada">
+            <soap:operation soapAction="http://CoordManage/saveCoordenada"/>
+            <wsdl:input name="saveCoordenadaRequest">
+                <soap:body use="literal"/>
+            </wsdl:input>
+      <wsdl:output name="saveCoordenadaResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+    </wsdl:operation>
+        <wsdl:operation name="getCoordenada">
+      <soap:operation soapAction="http://CoordManage/getCoordenada"/>
+      <wsdl:input name="getCoordenadaRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getCoordenadaResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    </wsdl:binding>
+  <wsdl:service name="CoordManageHttpService">
+    <wsdl:port binding="tns:CoordManageHttpBinding" name="CoordManageHttpPort">
+      <soap:address location="http://localhost:7800/CoordManage/CoordManage"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
